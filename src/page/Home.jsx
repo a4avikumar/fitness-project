@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
-import { Navbar } from '@/components/Navbar'
+import { Navbar  } from '@/components/Navbar'
 import React from 'react'
 import {
     Avatar,
@@ -12,7 +12,6 @@ export const Home = () => {
     return (
         <>
            <Navbar></Navbar>
-           <Button>Testing</Button>
         </>
     )
 }
