@@ -17,7 +17,7 @@ export const Navbar = () => {
                     <nav class="flex items-center gap-4 text-sm lg:gap-6">
                         <Link class="transition-colors hover:text-foreground/80 text-foreground" href="/">Home</Link>
                         <Link to='/Fitnotes' class="transition-colors hover:text-foreground/80 text-foreground/60">FitNotes</Link>
-                        <Link class="transition-colors hover:text-foreground/80 text-foreground/60" href="">FormCheck</Link>
+                        <Link to='/Formcheck' class="transition-colors hover:text-foreground/80 text-foreground/60" >FormCheck</Link>
                         <Link class="transition-colors hover:text-foreground/80 text-foreground/60" href="">Supplements</Link>
                     </nav>
                 </div>

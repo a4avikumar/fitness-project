@@ -3,6 +3,7 @@ import './App.css'
 import { Button } from './components/ui/button'
 import { Home } from './page/Home';
 import { Fitnotes } from './page/Fitnotes'
+import { Formcheck } from './page/Formcheck'
 import {
   BrowserRouter,
   createBrowserRouter,
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
           <Route index element= {<Home />}/>
           <Route path="/Fitnotes" element={<Fitnotes />}/>
+          <Route path="/Formcheck" element={<Formcheck />}/>
 
     </Route>
   )
