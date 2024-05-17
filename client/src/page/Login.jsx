@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
+import { loginUser } from './api';
 
 export const Login = () => {
 
@@ -13,9 +14,28 @@ export const Login = () => {
         password: ""
     })
 
-    const processData = () => {
-        console.log({data})
-    }
+    const navigate = useNavigate(); // to redirect after successful login
+
+    const processData = async () => {
+        try {
+            const result = await loginUser({
+                username: data.username,
+                password: data.password
+            });
+
+            if (result.message === 'Login successful') {
+                // Redirect to home page or dashboard
+                navigate('/'); // Adjust the path as needed
+                console.log("succesfull login")
+                console.log(data)
+            } else {
+                // Handle errors (e.g., display error message)
+                console.error(result.message);
+            }
+        } catch (error) {
+            console.error("An error occurred during login:", error);
+        }
+    };
 
   return (
     <div className="h-screen w-screen flex justify-center items-center">

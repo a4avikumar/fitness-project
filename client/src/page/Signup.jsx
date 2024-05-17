@@ -3,7 +3,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+
+import { Link, useNavigate } from "react-router-dom";
+import { registerUser } from './api';
 
 export const Signup = () => {
 
@@ -13,10 +15,33 @@ export const Signup = () => {
         username: "",
         password: ""
     })
+    
 
-    const processData = () => {
-        console.log({data})
-    }
+    // const processData = () => {
+    //     console.log({data})
+    // }
+    const navigate = useNavigate(); // to redirect after successful signup
+
+    const processData = async () => {
+        try {
+            const result = await registerUser({
+                fullname: data.fullName,
+                username: data.username,
+                password: data.password
+            });
+
+            if (result.message === 'User registered successfully') {
+                // Redirect to login page or home page
+                navigate('/Login');
+            } else {
+                // Handle errors (e.g., display error message)
+                console.error(result.message);
+            }
+        } catch (error) {
+            console.error("An error occurred during registration:", error);
+        }
+    };
+
 
   return (
     <div className="h-screen w-screen flex justify-center items-center">
