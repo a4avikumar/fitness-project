@@ -178,8 +178,6 @@ export const Home = () => {
                     ))}
                 </Slider>
             </div>
-
-
             {/* <ExcersizeCard src={'test.mp4'} name={"Test Excersize"} description={"This is just a testing excersize for core"} /> */}
         </>
     )

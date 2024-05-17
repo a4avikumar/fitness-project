@@ -18,7 +18,7 @@ export const Navbar = () => {
                         <Link class="transition-colors hover:text-foreground/80 text-foreground" href="/">Home</Link>
                         <Link to='/Fitnotes' class="transition-colors hover:text-foreground/80 text-foreground/60">FitNotes</Link>
                         <Link to='/Formcheck' class="transition-colors hover:text-foreground/80 text-foreground/60" >FormCheck</Link>
-                        <Link class="transition-colors hover:text-foreground/80 text-foreground/60" href="">Supplements</Link>
+                        <Link to='/Login' class="transition-colors hover:text-foreground/80 text-foreground/60" href="">Supplements</Link>
                     </nav>
                 </div>
                 <div>

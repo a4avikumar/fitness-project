@@ -4,6 +4,9 @@ import { Button } from './components/ui/button'
 import { Home } from './page/Home';
 import { Fitnotes } from './page/Fitnotes'
 import { Formcheck } from './page/Formcheck'
+import { Login } from './page/Login'
+import { Signup } from './page/Signup'
+
 import {
   BrowserRouter,
   createBrowserRouter,
@@ -26,6 +29,10 @@ const router = createBrowserRouter(
           <Route index element= {<Home />}/>
           <Route path="/Fitnotes" element={<Fitnotes />}/>
           <Route path="/Formcheck" element={<Formcheck />}/>
+          <Route path="/Login" element={<Login />}/>
+          <Route path="/Signup" element={<Signup />}/>
+
+
 
     </Route>
   )
