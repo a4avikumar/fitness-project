@@ -13,6 +13,8 @@ import {
   Router,
   RouterProvider,
 } from "react-router-dom";
+import Excercise from './excercise';
+import Sets from './Sets';
 const RootLayout = () => {
 
   return (
@@ -20,22 +22,49 @@ const RootLayout = () => {
   )
 }
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
-          <Route index element= {<Home />}/>
-          <Route path="/Fitnotes" element={<Fitnotes />}/>
-          <Route path="/Formcheck" element={<Formcheck />}/>
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path="/" element={<RootLayout />}>
+//           <Route index element= {<Home />}/>
+//           <Route path="/Fitnotes" element={<Fitnotes />}/>
+//           <Route path="/Formcheck" element={<Formcheck />}/>
 
-    </Route>
-  )
-);
+//     </Route>
+//   )
+// );
+
+const router = createBrowserRouter([{
+  path: "/",
+  element: <RootLayout />,
+  children: [
+    {
+      path: '/',
+      element: <Home />
+    },
+    {
+      path: '/Fitnotes',
+      element: <Fitnotes />
+    },
+    {
+      path: '/excercises/:excerciseId',
+      element: <Excercise />
+    },
+    {
+      path: '/excercises/:excerciseId/:id/sets',
+      element: <Sets />
+    },
+   
+  
+
+  ]
+}])
 
 
 function App() {
 
   return (
     <RouterProvider router={router} />
+
   )
 }
 

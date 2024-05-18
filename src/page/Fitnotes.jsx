@@ -1,7 +1,12 @@
 import React from 'react'
-import Login from '../components/login'
+import { FitFuncs } from '../fitfuncs'
+import {Navbar } from '../components/Navbar'
+
 export const Fitnotes = () => {
   return (
-    <Login></Login>
+  <>
+  <Navbar/>
+  <FitFuncs />
+  </>
   )
 }
