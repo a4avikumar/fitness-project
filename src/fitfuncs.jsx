@@ -16,6 +16,6 @@ export const FitFuncs = () => {
       ) : (
         <ExercisesPage onExerciseClick={handleExerciseClick} />
       )}
-    </div>
+    </div>    
   );
 };

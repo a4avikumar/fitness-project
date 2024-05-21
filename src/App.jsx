@@ -50,10 +50,9 @@ const router = createBrowserRouter([{
       element: <Excercise />
     },
     {
-      path: '/excercises/:excerciseId/:id/sets',
+      path: '/excercises/:excerciseId/sets',
       element: <Sets />
     },
-   
   
 
   ]
@@ -63,7 +62,10 @@ const router = createBrowserRouter([{
 function App() {
 
   return (
+    <>
     <RouterProvider router={router} />
+
+    </>
 
   )
 }
