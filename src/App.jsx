@@ -3,7 +3,11 @@ import './App.css'
 import { Button } from './components/ui/button'
 import { Home } from './page/Home';
 import { Fitnotes } from './page/Fitnotes'
-import { Formcheck } from './page/Formcheck'
+import { Loginf } from './page/Login_page'
+import { FormCheck } from './page/FormCheck';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+//import { Signupf } from './page/Sign_page';
 import {
   BrowserRouter,
   createBrowserRouter,
@@ -15,6 +19,9 @@ import {
 } from "react-router-dom";
 import Excercise from './excercise';
 import Sets from './Sets';
+import { Signup } from './page/Signup';
+import { Login } from './page/Login';
+import { Signupf } from './page/Sign_page';
 const RootLayout = () => {
 
   return (
@@ -39,6 +46,10 @@ const router = createBrowserRouter([{
   children: [
     {
       path: '/',
+      element: <Loginf/>
+    },
+    {
+      path: '/home',
       element: <Home />
     },
     {
@@ -50,9 +61,21 @@ const router = createBrowserRouter([{
       element: <Excercise />
     },
     {
-      path: '/excercises/:excerciseId/sets',
+      path: '/excercises/:excerciseId/:excerciseName/sets',
       element: <Sets />
     },
+    {
+  path:'/Login_page',
+  element:<Loginf/>
+    },
+    {
+  path:'/Sign_page',
+  element:<Signupf/>
+    },
+    {
+      path:'/FormCheck',
+      element:<FormCheck/>
+        },
   
 
   ]
@@ -64,7 +87,10 @@ function App() {
   return (
     <>
     <RouterProvider router={router} />
-
+    <div>
+            <ToastContainer position="top-right" autoClose={5000} />
+            {/* Other components */}
+        </div>
     </>
 
   )

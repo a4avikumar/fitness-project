@@ -1,4 +1,4 @@
-    import { chest, biceps, triceps,back,abs,shoulders,legs ,cardio} from "../page/Home";
+import { chest, biceps, triceps,back,abs,shoulders,legs ,cardio} from "../page/FormCheck";
 export const exerciseData = [
   { id: 1, name: 'Chest',  excercises:chest },
   { id: 2, name: 'Biceps',exercises:biceps },
