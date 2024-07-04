@@ -4,6 +4,7 @@ import { excerciseMap } from './page/FormCheck';
 import SetInput from './components/ExerciseDetail/SetInput';
 import { getDB } from './lib/DB/initDB';
 import { addSet, getSets } from './lib/DB/makeUser';
+import { Navbar } from './components/Navbar';
 
 function Sets() {
   const params = useParams();
@@ -19,7 +20,8 @@ function Sets() {
   const sets = getSets(excerciseId, excerciseName)
 
   return (
-    
+    <>
+    <Navbar/>
     <div className="bg-gray-900 min-h-screen p-8 flex items-center justify-center">
   <div className="bg-gray-800 rounded-xl shadow-xl p-8 max-w-2xl w-full">
     <h1 className="text-4xl font-extrabold text-white mb-8 text-center">
@@ -42,7 +44,7 @@ function Sets() {
             value={newSet.weight}
             onChange={(e) => setNewSet((s) => ({ ...s, weight: e.target.value }))}
             placeholder="Weight"
-          />
+            />
         </div>
         <div className="flex flex-col gap-4">
           <label className="text-white font-semibold" htmlFor="reps">Reps</label>
@@ -53,12 +55,12 @@ function Sets() {
             value={newSet.reps}
             onChange={(e) => setNewSet((s) => ({ ...s, reps: e.target.value }))}
             placeholder="Reps"
-          />
+            />
         </div>
         <button
           onClick={() => addSet(excerciseId, excerciseName, newSet)}
           className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors duration-300"
-        >
+          >
           Add Set
         </button>
       </div>
@@ -66,6 +68,7 @@ function Sets() {
   </div>
 </div>
 
+          </>
   );
 }
 

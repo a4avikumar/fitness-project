@@ -8,6 +8,8 @@ import {
 import { loginUser, logoutUser, signupUser } from '@/lib/DB/makeUser'
 import { clearDB, getDB } from '@/lib/DB/initDB'
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+
 
 export const Navbar = () => {
 
@@ -35,7 +37,8 @@ export const Navbar = () => {
                     </Avatar>
                     <Button variant="outline" onClick={() => {
                         logoutUser();
-                        navigate('/Login_page');
+                        toast.success("Logged Out");
+                        navigate('/Home');
                     }}>
                         Logout
                     </Button>

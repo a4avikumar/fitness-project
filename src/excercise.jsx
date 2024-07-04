@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { excerciseMap } from './page/FormCheck';
+import { Navbar } from './components/Navbar';
 
 function Excercise() {
     const params = useParams();
@@ -9,7 +10,9 @@ function Excercise() {
     const excercise = excerciseMap[excerciseId];
     if (excercise === undefined) return <div className="">Dont have excercise called {excerciseId}</div>
     return (
-<div className="bg-gray-900 min-h-screen flex items-center justify-center px-4">
+      <>
+      <Navbar/>
+<div className="bg-gray-900 min-h-screen flex items-center justify-center px-4 pt-8">
   <div className="grid grid-cols-1 gap-6 max-w-3xl">
     {excercise.map((exercise, index) => (
       <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
@@ -27,6 +30,7 @@ function Excercise() {
   </div>
 </div>
   
+    </>
     
     
     )

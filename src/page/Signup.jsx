@@ -103,7 +103,7 @@ export const Signup = () => {
 
             if (result.success) {
                 toast.success("Successfully Registered!");
-                navigate('/home'); // Adjust the path as needed
+                navigate('/Fitnotes'); // Adjust the path as needed
                 setSuccess(result.message);
             } else {
                 setError(result.message);

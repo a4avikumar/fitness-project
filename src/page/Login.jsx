@@ -19,7 +19,7 @@ export const Login = () => {
 
             if (result.success) {
                 toast.success("Successfully logged in!");
-                navigate('/home'); // Adjust the path as needed
+                navigate('/Fitnotes'); // Adjust the path as needed
             } else {
                 setError(result.message);
             }

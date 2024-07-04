@@ -43,39 +43,40 @@ export const chest = [
   {
     id: 1,
     name: 'Bench Press',
-    description: 'Description of exercise 1 goes here.',
+    description: 'The bench press is a strength training exercise that involves lying on a bench and pressing a weighted barbell or dumbbells upward from chest level.',
     src: 'excercises/bench_press.gif',
   },
   {
     id: 2,
     name: 'Push Up',
-    description: 'Description of exercise 2 goes here.',
+    description: 'A bodyweight exercise where you lower and raise your body using your arms while facing down.',
     src: 'excercises/push_up.gif',
   },
   {
     id: 3,
     name: 'Incline Dumbbell Bench Press',
-    description: 'Description of exercise 2 goes here.',
+    description: 'A strength exercise performed on an incline bench, pressing dumbbells upward from chest level.',
     src: 'excercises/incline_dumbell_bench_press.gif',
   },
   {
     id: 4,
     name: 'Cable Crossover',
-    description: 'Description of exercise 2 goes here.',
+    description: 'An exercise where you pull cables from opposite sides to work your chest muscles.',
     src: 'excercises/cable_crossover.gif',
   },
   {
     id: 5,
     name: 'Incline Dumbbell Bench Press',
-    description: 'Description of exercise 2 goes here.',
+    description: 'A strength exercise performed on an incline bench, pressing dumbbells upward from chest level.',
     src: 'excercises/incline_dumbell_bench_press.gif',
   },
   {
     id: 6,
     name: 'Incline Dumbbell Flys',
-    description: 'Description of exercise 2 goes here.',
+    description: 'An exercise performed on an incline bench, spreading and closing your arms with dumbbells to target chest muscles.',
     src: 'excercises/dumbell_flys.gif',
   },
+  
   {
     id: 7,
     name: 'Decline Barbell Bench Press',
@@ -112,27 +113,28 @@ export const biceps = [
   {
     id: 1,
     name: 'Barbell Curl',
-    description: 'Description of exercise 1 goes here.',
-    src: 'excercises/barbell\_curl.gif',
+    description: 'The barbell curl is a bicep exercise where you lift a barbell from your thighs to your shoulders.',
+    src: 'excercises/barbell_curl.gif',
   },
   {
     id: 2,
     name: 'Cable Curl',
-    description: 'Description of exercise 2 goes here.',
-    src: 'excercises/cable\_curl.gif',
+    description: 'The cable curl is a bicep exercise that uses a cable machine to provide constant tension during the curl.',
+    src: 'excercises/cable_curl.gif',
   },
   {
     id: 3,
     name: 'Hammer Curl',
-    description: 'Description of exercise 2 goes here.',
-    src: 'excercises/hammer\_curl.gif',
+    description: 'The hammer curl is a bicep exercise performed with dumbbells, keeping palms facing each other.',
+    src: 'excercises/hammer_curl.gif',
   },
   {
     id: 4,
     name: 'Preacher Curl',
-    description: 'Description of exercise 2 goes here.',
-    src: 'excercises/preacher\_curl.gif',
+    description: 'The preacher curl is a bicep exercise done on a preacher bench, isolating the biceps for a controlled curl.',
+    src: 'excercises/preacher_curl.gif',
   },
+  
   {
     id: 5,
     name: 'Dumbbell Concentration Curl',
@@ -170,21 +172,22 @@ export const triceps = [
   {
     id: 1,
     name: 'Triceps Pushdown',
-    description: 'Description of exercise 1 goes here.',
+    description: 'The triceps pushdown is a cable exercise targeting the triceps by pushing a bar down from chest height.',
     src: 'excercises/triceps_pushdown.gif',
   },
   {
     id: 2,
     name: 'Skull Crusher',
-    description: 'Description of exercise 2 goes here.',
+    description: 'The skull crusher is an isolation exercise that involves lowering a barbell to the forehead while lying down to work the triceps.',
     src: 'excercises/skull_crusher.gif',
   },
   {
     id: 4,
     name: 'Dumbbell Kickbacks',
-    description: 'Description of exercise 2 goes here.',
+    description: 'Dumbbell kickbacks are a triceps exercise where you extend your arm backward while bent over holding a dumbbell.',
     src: 'excercises/dumbell_kickbacks.gif',
   },
+  
   {
     id: 5,
     name: 'Cable Overhead Triceps Extension',
